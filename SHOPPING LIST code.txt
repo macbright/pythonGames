@@ -1,0 +1,45 @@
+
+# make a list to hold the items
+shopping_list = []
+
+# make a list to hold the items
+def show_help():
+    print("what should we pick up at the store?")
+    print("""
+Enter 'DONE' to stop adding items
+Enter 'HELP' for this help,
+Enter 'SHOW' to show items on the list.
+""")
+
+def show_list():
+    print("here is your list: ")
+    
+    # print out the list 
+    for items in shopping_list:
+        print(items)
+        
+def add_to_list(new_items):
+      # add new items to our list
+    shopping_list.append(new_items)
+    print("Added {}. list now have {} items.".format(new_items, len(shopping_list)))
+
+show_help()
+
+while True:
+    # ask for new items
+    new_items = input("> ")
+    
+    if new_items == 'DONE':
+        break
+    elif new_items == 'HELP':
+        show_help()
+        continue
+    elif new_items == 'SHOW':
+        show_list()
+        continue
+    add_to_list(new_items)
+        
+  
+show_list()
+
+

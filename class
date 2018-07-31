@@ -1,0 +1,11 @@
+class Monster:
+    def __init__(self, hit_points = 10, weapon = 'gun', color = 'blue', sound = 'roor'):
+        self.hit_points = hit_points
+        self.color = color
+        self.weapon = weapon
+        self.sound = sound
+
+    def battlecry(self):
+        return self.sound.upper()
+    
+    
